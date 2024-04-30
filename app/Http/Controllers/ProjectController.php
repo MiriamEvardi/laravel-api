@@ -59,7 +59,7 @@ class ProjectController extends Controller
 
         $newProject->technologies()->attach($request->technologies);
 
-        return redirect()->route('admin.projects.index', $newProject->id);
+        return redirect()->route('admin.projects.index', $newProject);
     }
 
     /**
@@ -95,16 +95,16 @@ class ProjectController extends Controller
             $project->preview = $path;
         };
 
-        // aggiorno lo slug
-        $project->slug = Str::slug($request->name);
 
         $project->update($request->all());
+        // aggiorno lo slug
+        $project->slug = Str::slug($request->name);
 
         $project->save();
 
         $project->technologies()->sync($request->technologies);
 
-        return redirect()->route('admin.projects.show', $project->id);
+        return redirect()->route('admin.projects.show', $project);
     }
 
     /**
