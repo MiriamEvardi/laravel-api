@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Str;
 use App\Models\Project;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,6 +24,7 @@ class ProjectSeeder extends Seeder
             $newProject->description = $project['description'];
             $newProject->preview = $project['preview'];
             $newProject->link = $project['link'];
+            $newProject->slug = Str::slug($newProject->name);
 
             $newProject->save();
         }

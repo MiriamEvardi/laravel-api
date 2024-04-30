@@ -9,21 +9,21 @@ return [
         'link' => "http://637qhdwbgugtawygiuw632t"
     ],
     [
-        'name' => "Spotify",
+        'name' => "Spotifyaaaaaaaaaa",
         'description' => "applicazione di riproduzione musicale",
         'preview' => "aaaaaaaaaa",
         'technologies' => "HTML, CSS",
         'link' => "http://637qhdwbgugtawygiuw632t"
     ],
     [
-        'name' => "Spotify",
+        'name' => "Spotifydsasd",
         'description' => "applicazione di riproduzione musicale",
         'preview' => "aaaaaaaaaa",
         'technologies' => "HTML, CSS",
         'link' => "http://637qhdwbgugtawygiuw632t"
     ],
     [
-        'name' => "Spotify",
+        'name' => "Spotifdsdsaasddsay",
         'description' => "applicazione di riproduzione musicale",
         'preview' => "aaaaaaaaaa",
         'technologies' => "HTML, CSS",
