@@ -6,7 +6,7 @@
 
     <ul class="list-group">
         @foreach ($projects as $project)
-        <li class="list-group-item">{{ $project->name }} <a href="{{route('admin.projects.show', $project->id)}}">select</a></li>
+        <li class="list-group-item">{{ $project->name }} <a href="{{route('admin.projects.show', $project)}}">select</a></li>
         @endforeach
     </ul>
 

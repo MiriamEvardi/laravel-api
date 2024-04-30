@@ -46,7 +46,7 @@ Route::middleware(['auth', 'verified'])
             Route::get('/users', [DashboardController::class, 'users'])->name('users');
 
 
-            Route::resource('projects', ProjectController::class);
+            Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);;
 
             Route::resource('types', TypeController::class);
 

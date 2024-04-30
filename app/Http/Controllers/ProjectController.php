@@ -9,6 +9,8 @@ use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
+// libreria str
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -50,6 +52,9 @@ class ProjectController extends Controller
 
         $newProject->fill($request->all());
 
+        // salviamo lo slug
+        $newProject->slug = Str::slug($request->name);
+
         $newProject->save();
 
         $newProject->technologies()->attach($request->technologies);
@@ -89,6 +94,9 @@ class ProjectController extends Controller
             $path = Storage::disk('public')->put('previews', $request->preview);
             $project->preview = $path;
         };
+
+        // aggiorno lo slug
+        $project->slug = Str::slug($request->name);
 
         $project->update($request->all());
 

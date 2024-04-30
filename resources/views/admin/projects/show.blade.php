@@ -20,9 +20,9 @@
     <p>Link: {{$project->link}}</p>
 
     <div>
-        <a href="{{route('admin.projects.edit', $project->id)}}" class="btn btn-primary">Edit</a>
+        <a href="{{route('admin.projects.edit', $project)}}" class="btn btn-primary">Edit</a>
 
-        <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST" style="display: inline;">
+        <form action="{{ route('admin.projects.destroy', $project) }}" method="POST" style="display: inline;">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
