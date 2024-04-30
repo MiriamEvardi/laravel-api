@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\PostController;
+
+use App\Http\Controllers\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/projects', [PostController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'index']);
+
+// rotta singolo post
+Route::get('/projects/{id}', [ProjectController::class, 'show']);
