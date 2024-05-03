@@ -14,7 +14,6 @@ class NewContact extends Mailable
     use Queueable, SerializesModels;
 
     public $lead;
-
     /**
      * Create a new message instance.
      */
